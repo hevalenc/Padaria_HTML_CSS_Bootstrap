@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Padaria - Grãos da Terra</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <script src="script/validar.js"></script>
+</head>
+
+<body>
+    
+  <header class="sticky-sm-top">
+    <nav class="navbar navbar-light bg-dark">
+      <div class="container">
+        <img src="images/imagem_fundo.jpg" alt="image.logo" width="200px" height="80px">
+        <a class="navbar-brand text-white fs-1">Padaria Grãos da Terra</a>
+
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Produtos
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="paes.html">Pães</a></li>
+                <li><a class="dropdown-item" href="bolos.html">Bolos e Tortas</a></li>
+                <li><a class="dropdown-item" href="doces.html">Doces</a></li>
+                <li><a class="dropdown-item" href="especiais.html">Especiais da Casa</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Contato</a>
+          </li>
+        </ul>
+        
+      </div>
+    </nav>
+  </header>
+
+  <div class="container text-white bg-dark" style="width:200px; height:500px; padding-top:50px; padding: right 20px; float: left; text-align:justify;">
+    <p>Nosso Endereço: </p>
+    <p>Rua Brigadeiro Faria Lima, 999 - São José dos Campos - SP</p><br><br><br>
+    <p>Nosso Telefone: </p>
+    <p>(12) 98765-4321</p>
+  </div>
+
+  <div class="container my-3" style="padding-left:50px; float: left; max-width: 800px;">
+    <div class="card-body">
+      <h5 class="card-title text-black"><b>ENTRE EM CONTATO</b></h5>
+    </div>
+
+    <form method="POST" name="formulario">
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Nome Completo:</label>
+        <input class="form-control" id="exampleFormControlInput1" placeholder="Ex: Heitor Valenca" name="nome" required="required">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">E-mail:</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ex: name@example.com" name="email" required="required">
+      </div>
+      <div class="mb-3">
+        <select class="form-select form-select-sm-2" aria-label=".form-select-lg example" name="contato" required="required">
+          <option value="">Selecione o motivo de seu contato....</option>
+          <option value="encomendas">Encomendas</option>
+          <option value="duvidas">Dúvidas</option>
+          <option value="sugestoes">Sugestões</option>
+          <option value="reclamacoes">Reclamações</option>
+          <option value="avaliacoes">Avaliações</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Deixe aqui o seu comentário:</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="comentario" required="required"></textarea>
+      </div>
+
+      <button type="reset" class="btn btn-success" onclick="validar()">Enviar</button>
+      <button type="reset" class="btn btn-secondary">Limpar</button>
+    </form>
+  </div>
+
+  <footer class="text-white bg-dark" style="text-align: center; position:fixed; bottom:0px; width:100%;">
+    <p>Featured by Heitor Valença</p>
+  </footer>
+
+</body>
+</html>
